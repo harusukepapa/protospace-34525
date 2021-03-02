@@ -6,10 +6,7 @@ RSpec.describe User, type: :model do
   end
 
   describe 'ユーザー管理機能' do
-    it 'ユーザーの新規登録には、メールアドレスが必須であること'user = FactoryBot.build(:user)  # Userのインスタンス生成
-    user.email = ''  # emailの値を空にする
-    user.valid?
-    expect(user.errors.full_messages).to include "Email can't be blank"
+    it 'ユーザーの新規登録には、メールアドレスが必須であること'
     end
     it 'ユーザーの新規登録には、メールアドレスは一意性である'
     end
